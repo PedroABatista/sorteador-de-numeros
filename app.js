@@ -9,6 +9,11 @@ function sortear(){
 
     for (let i = 0; i < quantidade; i++) {
         numero = numAleatorio(de, ate);
+
+        while(sorteados.includes(sorteados)){
+            numero = numAleatorio(de, ate);
+        }
+
         sorteados.push(numero);
     }
     document.getElementById("resultado").innerHTML = `<label class="texto__paragrafo">Números sorteados:  ${sorteados} </label>`;
